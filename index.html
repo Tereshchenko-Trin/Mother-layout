@@ -9,15 +9,29 @@
   <body>
     <header class="header">
       <nav class="header__navigation">
-        <a href="#" class="header__navigation-link">Home</a>
-        <a href="#products" class="header__navigation-link">Products</a>
-        <a href="#" class="header__navigation-link">Specifications</a>
-        <a href="#" class="header__navigation-link">Statistics</a>
-        <a href="#contacts" class="header__navigation-link">Contact us</a>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Home</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#products" class="header__navigation-link">Products</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Specifications</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Statistics</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#contacts" class="header__navigation-link">Contact us</a>
+          </li>
+        </ul>
       </nav>
       <nav class="header__control">
-        <a href="#" class="header__search-link">Search</a>
-        <input type="text" class="header__search-input" id="search-input" />
+        <div class="header__search-field">
+          <label for="searchInput" class="header__search-label">Search</label>
+          <input type="search" class="header__search-input" id="searchInput" name="searchInput" />
+        </div>
         <div class="header__contact-link-wrapper">
           <a href="#" class="header__contact-link">Contact us</a>
         </div>
@@ -208,7 +222,7 @@
             </picture>
             <figcaption class="products__card-text">
               <h3 class="products__card-title">Event</h3>
-              <p class="products__card-description">1 products</p>
+              <p class="products__card-description">1 product</p>
             </figcaption>
           </figure>
         </div>

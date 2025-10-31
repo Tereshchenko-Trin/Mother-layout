@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
   scroll-behavior: smooth;
 }
 
@@ -46,7 +47,7 @@ a, picture {
   z-index: 2;
   transform: translateX(-50%);
 
-  & .header__navigation,
+  & .header__navigation-list,
   .header__control {
     display: flex;
     flex-direction: row;
@@ -59,10 +60,11 @@ a, picture {
   }
 
   & .header__navigation-link,
-  .header__search-link {
+  .header__search-label {
     font-size: 1rem;
     font-weight: 500;
     color: var(--secondary-text-color);
+    cursor: pointer;
   }
 
   & .header__search-input {
@@ -85,6 +87,7 @@ a, picture {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   & .header__contact-link {
