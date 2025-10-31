@@ -1,0 +1,346 @@
+@import url("./fonts.css");
+@import url("./variables.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+a, picture {
+  line-height: 0;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.header {
+  max-width: 1338px;
+  width: 100%;
+  padding: 15px 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+
+  & .header__navigation-list,
+  .header__control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+
+  & .header__navigation {
+    margin-right: 216px;
+  }
+
+  & .header__navigation-link,
+  .header__search-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
+
+  & .header__search-input {
+    width: 7.625em;
+    height: 2.5em;
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    background-color: var(--secondary-text-color);
+    border-radius: 3.125em;
+    display: none;
+  }
+
+  & .header__contact-link-wrapper {
+    width: 7.625rem;
+    height: 2.5rem;
+    background-color: var(--secondary-text-color);
+    border-radius: 3.125em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  & .header__contact-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+}
+
+.introduction {
+  max-width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  & .introduction__content-wrapper {
+    max-width: 1150px;
+    width: 100%;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & .introduction__link-image {
+    max-width: 4.375rem;
+    width: 100%;
+  }
+
+  & .introduction__title {
+    margin-bottom: 2.625rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.075em;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+
+    & .introduction__title_italic {
+      display: inline-block;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.075em;
+      transform: translate(77px, 4px);
+    }
+  }
+
+  & .introduction__slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.slide_1 {
+  background-image: url("../assets/images/introduction-block-image1.webp");
+  animation-name: slideFadeInOut;
+}
+
+@keyframes slideFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide_2 {
+  background-image: url("../assets/images/introduction-block-image2.webp");
+  animation-name: slideFadeOutIn;
+}
+
+@keyframes slideFadeOutIn {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  & .about__content-wrapper {
+    max-width: 31.25rem;
+    width: 100%;
+  }
+
+  & .about__content-wrapper p:first-of-type {
+    margin-bottom: 1.625rem;
+  }
+
+  & .about__title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  & .about__description {
+    margin-bottom: 1.5rem;
+    line-height: 160%;
+  }
+
+  & .about__link {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #353535;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 100%;
+    color: #353535;
+  }
+
+  & .about__image {
+    max-width: 463px;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.about::before {
+  content: '';
+  display: inline-block;
+  max-width: 1093px;
+  width: 100%;
+  height: 168px;
+  background-image: url('../assets/icons/icon-inscription-about-block.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 5.75rem;
+  left: 1rem;
+  z-index: -1;
+}
+
+.products {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+
+  & .products__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%;
+    align-self: flex-start;
+  }
+
+  & .products__cards-wrapper {
+    display: grid;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & .products__cards-wrapper > :first-child {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  & .products__cards-wrapper > :last-child {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+
+  & .products__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  & .products__card-image {
+    max-width: 552px;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  & .products__card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+
+  & .products__card-description {
+    line-height: 160%;
+    color: var(--tetriary-text-color);
+  }
+
+  & .products__link-wrapper {
+    width: 12.0625rem;
+    height: 3.5em;
+    background-color: var(--accent-color);
+    border-radius: 3.125em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .products__link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 100%;
+    color: var(--secondary-text-color);
+  }
+}

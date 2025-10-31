@@ -4,25 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motherhood</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header class="header">
       <nav class="header__navigation">
-        <a href="#" class="header__navigation-link">Home</a>
-        <a href="#products" class="header__navigation-link">Products</a>
-        <a href="#" class="header__navigation-link">Specifications</a>
-        <a href="#" class="header__navigation-link">Statistics</a>
-        <a href="#contacts" class="header__navigation-link">Contact us</a>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Home</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#products" class="header__navigation-link">Products</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Specifications</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Statistics</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#contacts" class="header__navigation-link">Contact us</a>
+          </li>
+        </ul>
       </nav>
       <nav class="header__control">
-        <a href="#" class="header__search-link">Search</a>
-        <input type="text" class="header__search-input" id="search-input" />
-        <a href="#" class="header__contact-link">Contact us</a>
+        <div class="header__search-field">
+          <label for="searchInput" class="header__search-label">Search</label>
+          <input type="search" class="header__search-input" id="searchInput" name="searchInput" />
+        </div>
+        <div class="header__contact-link-wrapper">
+          <a href="#" class="header__contact-link">Contact us</a>
+        </div>
       </nav>
     </header>
     <main>
-      <section class="introduction">
+      <section class="introduction container">
         <div class="introduction__content-wrapper">
           <h1 class="introduction__title">
             Explore the magic
@@ -41,7 +57,7 @@
           <div class="introduction__slide slide_2"></div>
         </div>
       </section>
-      <section class="about" id="about">
+      <section class="about container" id="about">
         <div class="about__content-wrapper">
           <h2 class="about__title">Motherhood</h2>
           <p class="about__description">
@@ -61,35 +77,36 @@
         </div>
         <picture>
           <source
-            srcset="./assets/images/image-about-block.avif"
+            srcset="./assets/images/about-block-image.avif"
             type="image/avif"
           />
           <source
-            srcset="./assets/images/image-about-block.webp"
+            srcset="./assets/images/about-block-image.webp"
             type="image/webp"
           />
-          <img
-            src="./assets/images/image-about-block.jpg"
+          <img 
+            class="about__image"
+            src="./assets/images/about-block-image.jpg"
             alt="Mother with daughter"
           />
         </picture>
       </section>
-      <section class="products" id="products">
+      <section class="products container" id="products">
         <h2 class="products__title">Tips for mom</h2>
         <div class="products__cards-wrapper">
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image1-products-block.avif"
+                srcset="./assets/images/products-block-image1.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image1-products-block.webp"
+                srcset="./assets/images/products-block-image1.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image1-products-block.jpg"
+                src="./assets/images/products-block-image1.jpg"
                 alt="Mother with daughter"
               />
             </picture>
@@ -102,16 +119,16 @@
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image2-products-block.avif"
+                srcset="./assets/images/products-block-image2.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image2-products-block.webp"
+                srcset="./assets/images/products-block-image2.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image2-products-block.jpg"
+                src="./assets/images/products-block-image2.jpg"
                 alt="Mother with daughter"
               />
             </picture>
@@ -124,16 +141,16 @@
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image3-products-block.avif"
+                srcset="./assets/images/products-block-image3.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image3-products-block.webp"
+                srcset="./assets/images/products-block-image3.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image3-products-block.jpg"
+                src="./assets/images/products-block-image3.jpg"
                 alt="Mother with daughter"
               />
             </picture>
@@ -146,16 +163,16 @@
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image4-products-block.avif"
+                srcset="./assets/images/products-block-image4.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image4-products-block.webp"
+                srcset="./assets/images/products-block-image4.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image4-products-block.jpg"
+                src="./assets/images/products-block-image4.jpg"
                 alt="Mother with daughter"
               />
             </picture>
@@ -168,16 +185,16 @@
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image5-products-block.avif"
+                srcset="./assets/images/products-block-image5.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image5-products-block.webp"
+                srcset="./assets/images/products-block-image5.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image5-products-block.jpg"
+                src="./assets/images/products-block-image5.jpg"
                 alt="Mother with daughter"
               />
             </picture>
@@ -190,22 +207,22 @@
           <figure class="products__card">
             <picture class="products__image-wrapper">
               <source
-                srcset="./assets/images/image6-products-block.avif"
+                srcset="./assets/images/products-block-image6.avif"
                 type="image/avif"
               />
               <source
-                srcset="./assets/images/image6-products-block.webp"
+                srcset="./assets/images/products-block-image6.webp"
                 type="image/webp"
               />
               <img
                 class="products__card-image"
-                src="./assets/images/image6-products-block.jpg"
+                src="./assets/images/products-block-image6.jpg"
                 alt="Mother with daughter"
               />
             </picture>
             <figcaption class="products__card-text">
               <h3 class="products__card-title">Event</h3>
-              <p class="products__card-description">1 products</p>
+              <p class="products__card-description">1 product</p>
             </figcaption>
           </figure>
         </div>
@@ -213,9 +230,9 @@
           <a href="#" class="products__link">Show all products</a>
         </div>
       </section>
-      <section class="tips"></section>
-      <section class="articles"></section>
-      <section class="contacts" id="contacts"></section>
+      <section class="tips container"></section>
+      <section class="articles container"></section>
+      <section class="contacts container" id="contacts"></section>
     </main>
     <footer class="footer"></footer>
   </body>
