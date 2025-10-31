@@ -19,6 +19,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 a, picture {
@@ -229,7 +230,7 @@ a, picture {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 39px;
   }
 
   & .about__description {
@@ -277,11 +278,14 @@ a, picture {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
 
   & .products__title {
     font-size: 2rem;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 39px;
     align-self: flex-start;
   }
 
@@ -343,4 +347,20 @@ a, picture {
     line-height: 100%;
     color: var(--secondary-text-color);
   }
+}
+
+.products::before {
+  content: '';
+  display: inline-block;
+  width: 1659px;
+  height: 255px;
+  background-image: url('../assets/icons/icon-inscription-products-block.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 562px;
+  left: -246px;
+  z-index: -1;
 }
