@@ -1,6 +1,8 @@
 @import url("./fonts.css");
 @import url("./variables.css");
+@import url("./common.css");
 
+/* general styles--------------------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +42,7 @@ a, picture, article {
   padding: 0 1rem;
 }
 
+/* header block styles---------------------------------------------------------------------- */
 .header {
   max-width: 1370px;
   width: 100%;
@@ -101,11 +104,6 @@ a, picture, article {
     width: 7.625rem;
     height: 2.5rem;
     background-color: var(--secondary-text-color);
-    border-radius: 3.125em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
 
   .header__contact-link {
@@ -116,12 +114,11 @@ a, picture, article {
   }
 }
 
+/* introduction block styles---------------------------------------------------------------- */
 .introduction {
   max-width: 1440px;
   height: 829px;
   position: relative;
-  top: 0;
-  left: 0;
   overflow: hidden;
 
   .introduction__content-wrapper {
@@ -138,7 +135,7 @@ a, picture, article {
     transform: translateX(-50%);
   }
 
-  .introduction__link-image {
+  .introduction__link-icon {
     max-width: 4.375rem;
     width: 100%;
   }
@@ -222,6 +219,7 @@ a, picture, article {
   }
 }
 
+/* about block styles----------------------------------------------------------------------- */
 .about {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -232,8 +230,23 @@ a, picture, article {
   align-items: center;
   gap: 2rem;
   position: relative;
-  top: 0;
-  left: 0;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    max-width: 1093px;
+    width: 100%;
+    height: 168px;
+    background-image: url('../assets/icons/icon-inscription-about-block.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 5.75rem;
+    left: 16px;
+    z-index: -1;
+  }
 
   .about__content-wrapper {
     max-width: 31.25rem;
@@ -246,9 +259,6 @@ a, picture, article {
 
   .about__title {
     margin-bottom: 1.5rem;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 2.4375rem;
   }
 
   .about__description {
@@ -259,14 +269,14 @@ a, picture, article {
   .about__link-wrapper {
     width: fit-content;
     padding: 0.25rem 0;
-    border-bottom: 1px outset #353535;
+    border-bottom: 1px outset var(--link-text-color);
   }
 
   .about__link {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     line-height: 1.5rem;
-    color: #353535;
+    color: var(--link-text-color);
     display: inline-block;
   }
 
@@ -277,23 +287,7 @@ a, picture, article {
   }
 }
 
-.about::before {
-  content: '';
-  display: inline-block;
-  max-width: 1093px;
-  width: 100%;
-  height: 168px;
-  background-image: url('../assets/icons/icon-inscription-about-block.svg');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-  vertical-align: middle;
-  position: absolute;
-  bottom: 5.75rem;
-  left: 16px;
-  z-index: -1;
-}
-
+/* products block styles-------------------------------------------------------------------- */
 .products {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -302,8 +296,6 @@ a, picture, article {
   align-items: center;
   gap: 2.5rem;
   position: relative;
-  top: 0;
-  left: 0;
   overflow: hidden;
 
   &::before {
@@ -323,9 +315,6 @@ a, picture, article {
   }
 
   .products__title {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 2.4375rem;
     align-self: flex-start;
   }
 
@@ -376,6 +365,7 @@ a, picture, article {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.6875rem;
+    color: var(--text-color);
   }
 
   .products__card-description {
@@ -385,13 +375,7 @@ a, picture, article {
 
   .products__link-wrapper {
     width: 12.0625rem;
-    height: 3.5em;
     background-color: var(--accent-color);
-    border-radius: 3.125em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
 
   .products__link {
@@ -402,11 +386,10 @@ a, picture, article {
   }
 }
 
+/* tips block styles------------------------------------------------------------------------ */
 .tips {
   background-color: var(--accent-color);
   position: relative;
-  top: 0;
-  left: 0;
   z-index: -2;
   overflow: hidden;
 
@@ -452,8 +435,6 @@ a, picture, article {
     align-items: center;
     gap: 2.5rem;
     position: relative;
-    top: 0;
-    left: 0;
 
     &::before {
       content: '';
@@ -481,9 +462,7 @@ a, picture, article {
   }
 
   .tips__title {
-    font-size: 2rem;
     font-weight: 700;
-    line-height: 2.4375rem;
     color: var(--secondary-text-color);
     align-self: flex-start;
   }
@@ -518,8 +497,6 @@ a, picture, article {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 0;
-    left: 0;
   
     &::before {
       content: '';
@@ -559,14 +536,8 @@ a, picture, article {
 
   .tips__link-wrapper {
     width: 6.4375rem;
-    height: 3.5em;
     padding: 0.5rem 1.5rem;
     background-color: var(--secondary-text-color);
-    border-radius: 3.125em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
 
   .tips__link {
@@ -577,6 +548,7 @@ a, picture, article {
   }
 }
 
+/* articles block styles-------------------------------------------------------------------- */
 .articles {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -586,9 +558,7 @@ a, picture, article {
   gap: 2.5rem;
 
   .articles__title {
-    font-size: 2rem;
     font-weight: 700;
-    line-height: 2.4375rem;
     align-self: flex-start;
   }
 
@@ -633,7 +603,7 @@ a, picture, article {
 
   .articles__card-description {
     line-height: 1.625rem;
-    color: #8B8B8B;
+    color: var(--tetriary-text-color);
   }
 
   .articles__card-link {
@@ -643,13 +613,7 @@ a, picture, article {
 
   .articles__link-wrapper {
     width: 12rem;
-    height: 3.5em;
     background-color: var(--accent-color);
-    border-radius: 3.125em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
 
   .articles__link {
@@ -660,6 +624,7 @@ a, picture, article {
   }
 }
 
+/* contacts block styles-------------------------------------------------------------------- */
 .contacts {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
@@ -676,7 +641,7 @@ a, picture, article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 2.5rem;
 
     &::before {
@@ -696,9 +661,7 @@ a, picture, article {
 
   .contacts__title {
     margin-bottom: 2.5rem;
-    font-size: 2rem;
     font-weight: 700;
-    line-height: 2.4375rem;
   }
 
   .contacts__form-title {
@@ -714,7 +677,6 @@ a, picture, article {
   }
 
   .contacts__form {
-    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -729,6 +691,7 @@ a, picture, article {
 
   .contacts__textarea-field {
     width: 100%;
+    margin-bottom: 0.5rem;
     line-height: 0;
   }
 
@@ -823,6 +786,7 @@ a, picture, article {
   }
 }
 
+/* footer block styles---------------------------------------------------------------------- */
 .footer {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
@@ -843,9 +807,6 @@ a, picture, article {
     max-width: 188px;
     width: 100%;
     margin-bottom: 2.5rem;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 2.4375rem;
   }
 
   .footer__connection-wrapper {
