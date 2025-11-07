@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to our Motherhood website, a nurturing hub designed exclusively for mothers, by mothers. Step into a sanctuary of support, wisdom, and connection as we journey together through the beautiful chaos of motherhood.">
     <title>Motherhood</title>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -32,7 +33,7 @@
           <label for="searchInput" class="header__search-label">Search</label>
           <input type="search" class="header__search-input" id="searchInput" name="searchInput" />
         </div>
-        <div class="header__contact-link-wrapper">
+        <div class="header__contact-link-wrapper button">
           <a href="#" class="header__contact-link">Contact us</a>
         </div>
       </nav>
@@ -59,7 +60,7 @@
       </section>
       <section class="about container" id="about">
         <div class="about__content-wrapper">
-          <h2 class="about__title">Motherhood</h2>
+          <h2 class="about__title title">Motherhood</h2>
           <p class="about__description">
             Welcome to our Motherhood website, a nurturing hub designed
             exclusively for mothers, by mothers. Step into a sanctuary of
@@ -73,7 +74,9 @@
             heartfelt stories, and practical tips that resonate with the joys
             and challenges of raising little ones.
           </p>
-          <a href="#" class="about__link">Learn more</a>
+          <div class="about__link-wrapper">
+            <a href="#" class="about__link">Learn more</a>
+          </div>
         </div>
         <picture>
           <source
@@ -86,154 +89,423 @@
           />
           <img 
             class="about__image"
+            loading="lazy"
             src="./assets/images/about-block-image.jpg"
             alt="Mother with daughter"
           />
         </picture>
       </section>
       <section class="products container" id="products">
-        <h2 class="products__title">Tips for mom</h2>
+        <h2 class="products__title title">Tips for mom</h2>
         <div class="products__cards-wrapper">
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image1.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image1.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image1.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Analytics</h3>
-              <p class="products__card-description">5 products</p>
-            </figcaption>
-          </figure>
+          <div class="products__cards-block products__cards-block_first">
+            <a href="#" aria-label="Analytics products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image1.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image1.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Analytics</h3>
+                  <p class="products__card-description">5 products</p>
+                </div>
+              </article>
+            </a>
 
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image2.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image2.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image2.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Print</h3>
-              <p class="products__card-description">2 products</p>
-            </figcaption>
-          </figure>
+            <a href="#" aria-label="Print products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image2.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image2.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image2.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Print</h3>
+                  <p class="products__card-description">2 products</p>
+                </div>
+              </article>
+            </a>
+  
+            <a href="#" aria-label="Creative studio products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image3.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image3.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image3.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Creative Studio</h3>
+                  <p class="products__card-description">11 products</p>
+                </div>
+              </article>
+            </a>
+          </div>
 
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image3.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image3.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image3.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Creative Studio</h3>
-              <p class="products__card-description">11 products</p>
-            </figcaption>
-          </figure>
-
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image4.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image4.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image4.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Influencer marketing</h3>
-              <p class="products__card-description">5 products</p>
-            </figcaption>
-          </figure>
-
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image5.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image5.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image5.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Digital</h3>
-              <p class="products__card-description">2 products</p>
-            </figcaption>
-          </figure>
-
-          <figure class="products__card">
-            <picture class="products__image-wrapper">
-              <source
-                srcset="./assets/images/products-block-image6.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="./assets/images/products-block-image6.webp"
-                type="image/webp"
-              />
-              <img
-                class="products__card-image"
-                src="./assets/images/products-block-image6.jpg"
-                alt="Mother with daughter"
-              />
-            </picture>
-            <figcaption class="products__card-text">
-              <h3 class="products__card-title">Event</h3>
-              <p class="products__card-description">1 product</p>
-            </figcaption>
-          </figure>
+          <div class="products__cards-block products__cards-block_second">
+            <a href="#" aria-label="Influencer marketing products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image4.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image4.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image4.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Influencer marketing</h3>
+                  <p class="products__card-description">5 products</p>
+                </div>
+              </article>
+            </a>
+  
+            <a href="#" aria-label="Digital products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image5.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image5.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image5.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Digital</h3>
+                  <p class="products__card-description">2 products</p>
+                </div>
+              </article>
+            </a>            
+  
+            <a href="#" aria-label="Event products link" class="products__card-link">
+              <article class="products__card">
+                <picture class="products__image-wrapper">
+                  <source
+                    srcset="./assets/images/products-block-image6.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/products-block-image6.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="products__card-image"
+                    loading="lazy"
+                    src="./assets/images/products-block-image6.jpg"
+                    alt=""
+                  />
+                </picture>
+                <div class="products__card-text">
+                  <h3 class="products__card-title">Event</h3>
+                  <p class="products__card-description">1 product</p>
+                </div>
+              </article>
+            </a>            
+          </div>
         </div>
-        <div class="products__link-wrapper">
+        <div class="products__link-wrapper button">
           <a href="#" class="products__link">Show all products</a>
         </div>
       </section>
-      <section class="tips container"></section>
-      <section class="articles container"></section>
-      <section class="contacts container" id="contacts"></section>
+      <section class="tips">
+        <div class="tips__container">
+          <h2 class="tips__title title">Tips</h2>
+          <div class="tips__cards-wrapper">
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-bottle.svg" alt="Baby bottle" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+  
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-cloth.svg" alt="Maternity clothes" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+  
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-mother.svg" alt="Mother" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+  
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-stroller.svg" alt="Baby stroller" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+  
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-home.svg" alt="Home" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+            
+            <article class="tips__card">
+              <div class="tips__card-icon-wrapper">
+                <img src="./assets/icons/icon-letter.svg" alt="Letter" class="tips__card-icon">
+              </div>
+              <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
+              <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
+            </article>
+          </div>
+          <div class="tips__link-wrapper button">
+            <a href="#" class="tips__link">All tips</a>
+          </div>
+        </div>
+      </section>
+      <section class="articles container">
+        <h2 class="articles__title title">Stories</h2>
+        <div class="articles__cards-wrapper">
+          <article class="articles__card">
+            <picture class="articles__image-wrapper">
+              <source
+                srcset="./assets/images/articles-block-image1.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./assets/images/articles-block-image1.webp"
+                type="image/webp"
+              />
+              <img 
+                class="articles__card-image"
+                loading="lazy"
+                src="./assets/images/articles-block-image1.jpg"
+                alt="Mother with child"
+              />
+            </picture>
+            <div class="articles__card-text-wrapper">
+              <h3 class="articles__card-title">Have a first aid kit for yourself</h3>
+              <p class="articles__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should many who give useful advice to mothers of newborns rightly note that mothers should not forget not forget...</p>
+              <a href="#" class="articles__card-link" aria-label="Read more about first article">Read more</a>
+            </div>
+          </article>
+
+          <article class="articles__card">
+            <picture class="articles__image-wrapper">
+              <source
+                srcset="./assets/images/articles-block-image2.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./assets/images/articles-block-image2.webp"
+                type="image/webp"
+              />
+              <img 
+                class="articles__card-image"
+                loading="lazy"
+                src="./assets/images/articles-block-image2.jpg"
+                alt="Mother with child"
+              />
+            </picture>
+            <div class="articles__card-text-wrapper">
+              <h3 class="articles__card-title">Have a first aid kit for yourself</h3>
+              <p class="articles__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget... <a href="#" class="articles__card-link" aria-label="Read more about second article">Read more</a></p>
+            </div>
+          </article>
+
+          <article class="articles__card">
+            <picture class="articles__image-wrapper">
+              <source
+                srcset="./assets/images/articles-block-image3.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./assets/images/articles-block-image3.webp"
+                type="image/webp"
+              />
+              <img 
+                class="articles__card-image"
+                loading="lazy"
+                src="./assets/images/articles-block-image3.jpg"
+                alt="Mother with child"
+              />
+            </picture>
+            <div class="articles__card-text-wrapper">
+              <h3 class="articles__card-title">Have a first aid kit for yourself</h3>
+              <p class="articles__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget... <a href="#" class="articles__card-link" aria-label="Read more about third article">Read more</a></p>
+            </div>
+          </article>
+        </div>        
+        <div class="articles__link-wrapper button">
+          <a href="#" class="articles__link">Show all stories</a>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title title">Get in touch</h2>
+          <div class="contacts__connection-wrapper">
+            <div class="contacts__form-wrapper">
+              <h3 class="contacts__form-title">Send a Message</h3>
+              <p class="contacts__form-description">Specifications</p>
+              <form action="#" method="post" class="contacts__form form">
+                <div class="contacts__form-field">
+                  <label for="userName" class="contacts__form-label form__label">Name</label>
+                  <input type="text" id="userName" name="userName" autocomplete="name" placeholder="Name" class="contacts__form-input form__name-input">
+                </div>
+    
+                <div class="contacts__form-field">
+                  <label for="email" class="contacts__form-label">Email Address</label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="Email Address" class="contacts__form-input form__email-input">
+                </div>
+    
+                <div class="contacts__form-field">
+                  <label for="city" class="contacts__form-label">City</label>
+                  <input type="text" id="city" name="city" autocomplete="off" placeholder="City" class="contacts__form-input form__city-input">
+                </div>
+    
+                <div class="contacts__form-field">
+                  <label for="phoneNumber" class="contacts__form-label">Phone number</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" placeholder="Phone number" class="contacts__form-input">
+                </div>
+    
+                <div class="contacts__textarea-field">
+                  <label for="message" class="contacts__form-label">Message</label>
+                  <textarea id="message" name="message" placeholder="Message" class="contacts__form-textarea"></textarea>
+                </div>
+                <button class="contacts__form-button" type="submit">Send a message</button>
+              </form>
+            </div>
+            <div class="contacts__communications-wrapper">
+              <div class="contacts__communications-section">
+                <h3 class="contacts__communications-title">Call Us</h3>
+                <p class="contacts__communications-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+                <a href="tel:(48)943943854" class="contacts__communications-link" target="_blank" rel="noopener noreferrer">(48) 943-943-854</a>
+              </div>
+    
+              <div class="contacts__communications-section">
+                <h3 class="contacts__communications-title">Visit Us</h3>
+                <p class="contacts__communications-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+                <a href="https://www.google.com/maps?ll=41.84365264298224,-87.64113894226752" class="contacts__communications-link" target="_blank" rel="noopener noreferrer">Address</a>
+              </div>
+    
+              <div class="contacts__communications-section">
+                <h3 class="contacts__communications-title">Live chat</h3>
+                <p class="contacts__communications-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+                <a href="mailto:kontakt@name.com.pl" class="contacts__communications-link" target="_blank" rel="noopener noreferrer">Live chat</a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map-wrapper">
+            <iframe title="Map with our address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7176.682634619939!2d-87.67784651277312!3d41.84290964195142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2d93f9ab635d%3A0xf4a3385fca20f638!2sW%2028th%20St%2C%20Chicago%2C%20IL%2060608%2C%20USA!5e0!3m2!1sen!2sby!4v1762289366252!5m2!1sen!2sby" width="1127" height="541" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <h2 class="footer__title title">Get in touch</h2>
+        <div class="footer__connection-wrapper">
+          <div class="footer__contacts-wrapper">
+            <h3 class="footer__contacts-title">Contacts</h3>
+            <div class="footer__contacts-wrapper">
+              <div class="footer__contacts-item">
+                <h4 class="footer__contact-title">Address:</h4>
+                <p class="footer__contacts-description">W 28th St, Chicago</p>
+              </div>
+              <div class="footer__contacts-item">
+                <h4 class="footer__contact-title">Contact:</h4>
+                <p class="footer__contacts-description">kontakt@name.com.pl</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__navigation-wrapper">
+            <h3 class="footer__navigation-title">What we do</h3>
+            <nav class="footer__navigation">
+              <ul class="footer__navigation-list">
+                <li class="footer__navigation-item">
+                  <a href="#" class="footer__navigation-link">About us</a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a href="#" class="footer__navigation-link">Our realization</a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a href="#" class="footer__navigation-link">FAQ</a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a href="#" class="footer__navigation-link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__socials-wrapper">
+            <h3 class="footer__socials-title">Get in touch</h3>
+            <nav class="footer__socials">
+              <ul class="footer__socials-list">
+                <li class="footer__socials-item">
+                  <a href="#" aria-label="Facebook link" class="footer__socials-link">
+                    <img src="./assets/icons/icon-facebook.svg" alt="Facebook icon" class="footer__socials-icon">
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="#" aria-label="Instagram link" class="footer__socials-link">
+                    <img src="./assets/icons/icon-instagram.svg" alt="Instagram icon" class="footer__socials-icon">
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
