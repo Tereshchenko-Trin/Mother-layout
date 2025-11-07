@@ -1,3 +1,7 @@
+@import url("./fonts-minimized.css");
+@import url("./common-minimized.css");
+@import url("./variables-minimized.css");
+
 /* general styles--------------------------------------------------------------------------- */
 * {
   margin: 0;
@@ -99,8 +103,6 @@ a, picture, article {
   .header__burger-menu-input {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .header__burger-menu-input:checked + .header__burger-menu-label::before {
@@ -642,12 +644,14 @@ a, picture, article {
     width: 6.4375rem;
     padding: 0.5rem 1.5rem;
     background-color: var(--secondary-text-color);
+    text-align: center;
   }
 
   .tips__link {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     line-height: 1.5rem;
+    white-space: nowrap;
     color: var(--accent-color);
   }
 }
@@ -1075,7 +1079,7 @@ a, picture, article {
 
 @media (max-width: 770px) {
   .introduction {
-    height: 500px;
+    height: 700px;
   }
   
   .introduction .introduction__title {
@@ -1141,7 +1145,7 @@ a, picture, article {
 
 @media (max-width: 670px) {
   .introduction {
-    height: 400px;
+    height: 600px;
   }
 
   .introduction .introduction__title {
@@ -1175,7 +1179,7 @@ a, picture, article {
   }
 
   .introduction {
-    height: 360px;
+    height: 500px;
   }
 
   .introduction .introduction__title {

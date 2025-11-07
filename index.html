@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Welcome to our Motherhood website, a nurturing hub designed exclusively for mothers, by mothers. Step into a sanctuary of support, wisdom, and connection as we journey together through the beautiful chaos of motherhood." />
     <title>Motherhood</title>
-    <link rel="preload" href="./styles/fonts.css" as="font"/>
-    <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="./assets/icons/icon-favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style-minimized.css">
   </head>
   <body>
     <header class="header">
@@ -87,8 +85,24 @@
           <div class="introduction__slide slide_1">
             <picture class="introduction__image">
               <source
+                media="(min-width: 770px)"
                 srcset="./assets/images/introduction-block-image1.avif"
                 type="image/avif"
+              />              
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/introduction-block-770w-image1.avif"
+                type="image/avif"
+              />
+              <source
+                media="(min-width: 770px)"
+                srcset="./assets/images/introduction-block-image1.webp"
+                type="image/webp"
+              />              
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/introduction-block-770w-image1.webp"
+                type="image/webp"
               />
               <img 
               class="slide_1"
@@ -101,8 +115,24 @@
           <div class="introduction__slide slide_2">
             <picture class="introduction__image">
               <source
+                media="(min-width: 770px)"
                 srcset="./assets/images/introduction-block-image2.avif"
                 type="image/avif"
+              />              
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/introduction-block-770w-image2.avif"
+                type="image/avif"
+              />
+              <source
+                media="(min-width: 770px)"
+                srcset="./assets/images/introduction-block-image2.webp"
+                type="image/webp"
+              />              
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/introduction-block-770w-image2.webp"
+                type="image/webp"
               />
               <img 
               class="slide_2"
@@ -171,7 +201,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image1.jpg"
-                      alt=""
+                      alt="Mother with child"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -196,7 +226,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image2.jpg"
-                      alt=""
+                      alt="Family at lunch"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -221,7 +251,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image3.jpg"
-                      alt=""
+                      alt="Family in the kitchen"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -248,7 +278,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image4.jpg"
-                      alt=""
+                      alt="Children looking out the window"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -273,7 +303,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image5.jpg"
-                      alt=""
+                      alt="Family on a walk"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -298,7 +328,7 @@
                       class="products__card-image"
                       loading="lazy"
                       src="./assets/images/products-block-image6.jpg"
-                      alt=""
+                      alt="A family at a festive dinner"
                     />
                   </picture>
                   <div class="products__card-text">
@@ -405,7 +435,7 @@
                 class="articles__card-image"
                 loading="lazy"
                 src="./assets/images/articles-block-image1.jpg"
-                alt="Mother with child"
+                alt="Mother and son"
               />
             </picture>
             <div class="articles__card-text-wrapper">
@@ -446,7 +476,7 @@
                 class="articles__card-image"
                 loading="lazy"
                 src="./assets/images/articles-block-image2.jpg"
-                alt="Mother with child"
+                alt="Mother with baby"
               />
             </picture>
             <div class="articles__card-text-wrapper">
@@ -486,7 +516,7 @@
                 class="articles__card-image"
                 loading="lazy"
                 src="./assets/images/articles-block-image3.jpg"
-                alt="Mother with child"
+                alt="A child with a parent in the kitchen"
               />
             </picture>
             <div class="articles__card-text-wrapper">
@@ -538,7 +568,7 @@
               <div class="contacts__communications-section">
                 <h3 class="contacts__communications-title">Call Us</h3>
                 <p class="contacts__communications-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-                <a href="tel:(48)943943854" class="contacts__communications-link" target="_blank" rel="noopener noreferrer">(48) 943-943-854</a>
+                <a href="tel:+48943943854" class="contacts__communications-link">(48) 943-943-854</a>
               </div>
     
               <div class="contacts__communications-section">
