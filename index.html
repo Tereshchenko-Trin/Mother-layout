@@ -3,40 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Welcome to our Motherhood website, a nurturing hub designed exclusively for mothers, by mothers. Step into a sanctuary of support, wisdom, and connection as we journey together through the beautiful chaos of motherhood.">
+    <meta name="description" content="Welcome to our Motherhood website, a nurturing hub designed exclusively for mothers, by mothers. Step into a sanctuary of support, wisdom, and connection as we journey together through the beautiful chaos of motherhood." />
     <title>Motherhood</title>
+    <link rel="preload" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header class="header">
-      <nav class="header__navigation">
-        <ul class="header__navigation-list">
-          <li class="header__navigation-item">
-            <a href="#" class="header__navigation-link">Home</a>
-          </li>
-          <li class="header__navigation-item">
-            <a href="#products" class="header__navigation-link">Products</a>
-          </li>
-          <li class="header__navigation-item">
-            <a href="#" class="header__navigation-link">Specifications</a>
-          </li>
-          <li class="header__navigation-item">
-            <a href="#" class="header__navigation-link">Statistics</a>
-          </li>
-          <li class="header__navigation-item">
-            <a href="#contacts" class="header__navigation-link">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="header__control">
-        <div class="header__search-field">
-          <label for="searchInput" class="header__search-label">Search</label>
-          <input type="search" class="header__search-input" id="searchInput" name="searchInput" />
+      <div class="header__container">
+        <div class="header__burger-menu-wrapper">
+          <input type="checkbox" id="burgerMenu" class="header__burger-menu-input">
+          <label for="burgerMenu" class="header__burger-menu-label"></label>
+          <nav class="header__burger-menu-navigation">
+            <ul class="header__burger-menu-navigation-list">
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">Home</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#products" class="header__navigation-link">Products</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">Specifications</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">Statistics</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#contacts" class="header__navigation-link">Contact us</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="header__contact-link-wrapper button">
-          <a href="#" class="header__contact-link">Contact us</a>
-        </div>
-      </nav>
+
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a href="#" class="header__navigation-link">Home</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#products" class="header__navigation-link">Products</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" class="header__navigation-link">Specifications</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" class="header__navigation-link">Statistics</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#contacts" class="header__navigation-link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="header__control">
+          <div class="header__search-field">
+            <label for="searchInput" class="header__search-label">Search</label>
+            <input type="search" class="header__search-input" id="searchInput" name="searchInput" />
+          </div>
+          <div class="header__contact-link-wrapper button">
+            <a href="#" class="header__contact-link">Contact us</a>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="introduction container">
@@ -54,8 +84,34 @@
           </a>
         </div>
         <div class="introduction__slider-wrapper">
-          <div class="introduction__slide slide_1"></div>
-          <div class="introduction__slide slide_2"></div>
+          <div class="introduction__slide slide_1">
+            <picture class="introduction__image">
+              <source
+                srcset="./assets/images/introduction-block-image1.avif"
+                type="image/avif"
+              />
+              <img 
+              class="slide_1"
+              fetchpriority="high"
+              src="./assets/images/introduction-block-image1.webp"
+              alt="Happy family"
+              />
+            </picture>
+          </div>
+          <div class="introduction__slide slide_2">
+            <picture class="introduction__image">
+              <source
+                srcset="./assets/images/introduction-block-image2.avif"
+                type="image/avif"
+              />
+              <img 
+              class="slide_2"
+              fetchpriority="low"
+              src="./assets/images/introduction-block-image2.webp"
+              alt="A happy family decorates a Christmas tree"
+              />
+            </picture>
+          </div>
         </div>
       </section>
       <section class="about container" id="about">
@@ -95,174 +151,176 @@
           />
         </picture>
       </section>
-      <section class="products container" id="products">
-        <h2 class="products__title title">Tips for mom</h2>
-        <div class="products__cards-wrapper">
-          <div class="products__cards-block products__cards-block_first">
-            <a href="#" aria-label="Analytics products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image1.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image1.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Analytics</h3>
-                  <p class="products__card-description">5 products</p>
-                </div>
-              </article>
-            </a>
-
-            <a href="#" aria-label="Print products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image2.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image2.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image2.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Print</h3>
-                  <p class="products__card-description">2 products</p>
-                </div>
-              </article>
-            </a>
+      <section class="products" id="products">
+        <div class="products__container container">
+          <h2 class="products__title title">Tips for mom</h2>
+          <div class="products__cards-wrapper">
+            <div class="products__cards-block products__cards-block_first">
+              <a href="#" aria-label="Analytics products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image1.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image1.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Analytics</h3>
+                    <p class="products__card-description">5 products</p>
+                  </div>
+                </article>
+              </a>
   
-            <a href="#" aria-label="Creative studio products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image3.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image3.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image3.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Creative Studio</h3>
-                  <p class="products__card-description">11 products</p>
-                </div>
-              </article>
-            </a>
+              <a href="#" aria-label="Print products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image2.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image2.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Print</h3>
+                    <p class="products__card-description">2 products</p>
+                  </div>
+                </article>
+              </a>
+    
+              <a href="#" aria-label="Creative studio products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image3.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image3.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Creative Studio</h3>
+                    <p class="products__card-description">11 products</p>
+                  </div>
+                </article>
+              </a>
+            </div>
+  
+            <div class="products__cards-block products__cards-block_second">
+              <a href="#" aria-label="Influencer marketing products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image4.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image4.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image4.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Influencer marketing</h3>
+                    <p class="products__card-description">5 products</p>
+                  </div>
+                </article>
+              </a>
+    
+              <a href="#" aria-label="Digital products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image5.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image5.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image5.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Digital</h3>
+                    <p class="products__card-description">2 products</p>
+                  </div>
+                </article>
+              </a>            
+    
+              <a href="#" aria-label="Event products link" class="products__card-link">
+                <article class="products__card">
+                  <picture class="products__image-wrapper">
+                    <source
+                      srcset="./assets/images/products-block-image6.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/products-block-image6.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="products__card-image"
+                      loading="lazy"
+                      src="./assets/images/products-block-image6.jpg"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="products__card-text">
+                    <h3 class="products__card-title">Event</h3>
+                    <p class="products__card-description">1 product</p>
+                  </div>
+                </article>
+              </a>            
+            </div>
           </div>
-
-          <div class="products__cards-block products__cards-block_second">
-            <a href="#" aria-label="Influencer marketing products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image4.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image4.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image4.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Influencer marketing</h3>
-                  <p class="products__card-description">5 products</p>
-                </div>
-              </article>
-            </a>
-  
-            <a href="#" aria-label="Digital products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image5.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image5.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image5.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Digital</h3>
-                  <p class="products__card-description">2 products</p>
-                </div>
-              </article>
-            </a>            
-  
-            <a href="#" aria-label="Event products link" class="products__card-link">
-              <article class="products__card">
-                <picture class="products__image-wrapper">
-                  <source
-                    srcset="./assets/images/products-block-image6.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./assets/images/products-block-image6.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    class="products__card-image"
-                    loading="lazy"
-                    src="./assets/images/products-block-image6.jpg"
-                    alt=""
-                  />
-                </picture>
-                <div class="products__card-text">
-                  <h3 class="products__card-title">Event</h3>
-                  <p class="products__card-description">1 product</p>
-                </div>
-              </article>
-            </a>            
+          <div class="products__link-wrapper button">
+            <a href="#" class="products__link">Show all products</a>
           </div>
-        </div>
-        <div class="products__link-wrapper button">
-          <a href="#" class="products__link">Show all products</a>
         </div>
       </section>
       <section class="tips">
-        <div class="tips__container">
+        <div class="tips__container container">
           <h2 class="tips__title title">Tips</h2>
           <div class="tips__cards-wrapper">
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-bottle.svg" alt="Baby bottle" class="tips__card-icon">
+                <img src="./assets/icons/icon-bottle.svg" alt="Baby bottle" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -270,7 +328,7 @@
   
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-cloth.svg" alt="Maternity clothes" class="tips__card-icon">
+                <img src="./assets/icons/icon-cloth.svg" alt="Maternity clothes" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -278,7 +336,7 @@
   
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-mother.svg" alt="Mother" class="tips__card-icon">
+                <img src="./assets/icons/icon-mother.svg" alt="Mother" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -286,7 +344,7 @@
   
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-stroller.svg" alt="Baby stroller" class="tips__card-icon">
+                <img src="./assets/icons/icon-stroller.svg" alt="Baby stroller" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -294,7 +352,7 @@
   
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-home.svg" alt="Home" class="tips__card-icon">
+                <img src="./assets/icons/icon-home.svg" alt="Home" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -302,7 +360,7 @@
             
             <article class="tips__card">
               <div class="tips__card-icon-wrapper">
-                <img src="./assets/icons/icon-letter.svg" alt="Letter" class="tips__card-icon">
+                <img src="./assets/icons/icon-letter.svg" alt="Letter" class="tips__card-icon" loading="lazy">
               </div>
               <h3 class="tips__card-title">Have a first aid kit for yourself</h3>
               <p class="tips__card-description">Many who give useful advice to mothers of newborns rightly note that mothers should not forget about their own health and comfort. Because a young mother needs to have on hand.</p>
@@ -319,12 +377,29 @@
           <article class="articles__card">
             <picture class="articles__image-wrapper">
               <source
+                media="(min-width: 715px)"
                 srcset="./assets/images/articles-block-image1.avif"
                 type="image/avif"
               />
               <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image1.avif"
+                type="image/avif"
+              />
+              <source
+                media="(min-width: 975px)"
                 srcset="./assets/images/articles-block-image1.webp"
                 type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image1.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image1.jpg"
+                type="image/jpg"
               />
               <img 
                 class="articles__card-image"
@@ -343,12 +418,29 @@
           <article class="articles__card">
             <picture class="articles__image-wrapper">
               <source
+                media="(min-width: 975px)"
                 srcset="./assets/images/articles-block-image2.avif"
                 type="image/avif"
               />
               <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image2.avif"
+                type="image/avif"
+              />
+              <source
+                media="(min-width: 975px)"
                 srcset="./assets/images/articles-block-image2.webp"
                 type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image2.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image2.jpg"
+                type="image/jpg"
               />
               <img 
                 class="articles__card-image"
@@ -366,12 +458,29 @@
           <article class="articles__card">
             <picture class="articles__image-wrapper">
               <source
+                media="(min-width: 975px)"
                 srcset="./assets/images/articles-block-image3.avif"
                 type="image/avif"
               />
               <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image3.avif"
+                type="image/avif"
+              />
+              <source
+                media="(min-width: 975px)"
                 srcset="./assets/images/articles-block-image3.webp"
                 type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image3.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 0px)"
+                srcset="./assets/images/articles-block-680w-image3.jpg"
+                type="image/jpg"
               />
               <img 
                 class="articles__card-image"
@@ -446,7 +555,7 @@
             </div>
           </div>
           <div class="contacts__map-wrapper">
-            <iframe title="Map with our address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7176.682634619939!2d-87.67784651277312!3d41.84290964195142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2d93f9ab635d%3A0xf4a3385fca20f638!2sW%2028th%20St%2C%20Chicago%2C%20IL%2060608%2C%20USA!5e0!3m2!1sen!2sby!4v1762289366252!5m2!1sen!2sby" width="1127" height="541" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="contacts__map" title="Map with our address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7176.682634619939!2d-87.67784651277312!3d41.84290964195142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2d93f9ab635d%3A0xf4a3385fca20f638!2sW%2028th%20St%2C%20Chicago%2C%20IL%2060608%2C%20USA!5e0!3m2!1sen!2sby!4v1762289366252!5m2!1sen!2sby" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
@@ -493,12 +602,12 @@
               <ul class="footer__socials-list">
                 <li class="footer__socials-item">
                   <a href="#" aria-label="Facebook link" class="footer__socials-link">
-                    <img src="./assets/icons/icon-facebook.svg" alt="Facebook icon" class="footer__socials-icon">
+                    <img src="./assets/icons/icon-facebook.svg" alt="Facebook icon" class="footer__socials-icon" loading="lazy">
                   </a>
                 </li>
                 <li class="footer__socials-item">
                   <a href="#" aria-label="Instagram link" class="footer__socials-link">
-                    <img src="./assets/icons/icon-instagram.svg" alt="Instagram icon" class="footer__socials-icon">
+                    <img src="./assets/icons/icon-instagram.svg" alt="Instagram icon" class="footer__socials-icon" loading="lazy">
                   </a>
                 </li>
               </ul>
